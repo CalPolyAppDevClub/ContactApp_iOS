@@ -39,11 +39,12 @@ class FoodRegViewController: ContactFormViewController {
                 regHandler.FavoritePizza = txt
             }
             
-            
             //save drink preference
             if let txt = favoriteSoda.text {
                 regHandler.FavoriteSoda = txt
             }
         }
+        
+        performSegueWithIdentifier("showSubmitScreen", sender: self)
     }
 }

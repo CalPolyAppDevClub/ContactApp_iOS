@@ -46,6 +46,11 @@ class ClassLvlRegViewController: ContactFormViewController {
     }
     
     @IBAction func nextButton(sender: UIButton) {
+        
+        if let regHandler = getRegistrationHandler(), answer = classLevelLabel.text {
+            regHandler.classStanding = answer
+        }
+        
         performSegueWithIdentifier("showPlatformInputScreen", sender: nil)
     }
     

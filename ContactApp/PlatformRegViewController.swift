@@ -87,13 +87,14 @@ class PlatformRegViewController: ContactFormViewController {
         if let regHandler = getRegistrationHandler() {
             regHandler.InterestedAndroid = optionOneSwitch.on
             regHandler.InterestediOS = optionTwoSwitch.on
-            regHandler.InterestedWindows =
-            optionThreeSwitch.on
+            regHandler.InterestedWindows = optionThreeSwitch.on
             
             if let txt = optionTextField.text {
                 regHandler.InterestedOther = txt
             }
         }
+        
+        performSegueWithIdentifier("showFoodInputScreen", sender: self)
         
     }
     

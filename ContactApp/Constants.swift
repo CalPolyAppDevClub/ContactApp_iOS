@@ -29,6 +29,8 @@ struct Constants {
             static let namePrompt = "What's your name?"
             static let firstNamePlaceholder = "First Name"
             static let lastNamePlaceholder = "Last Name"
+            static let requiredTitle = "Required"
+            static let requriedMessage = "You left a required field blank."
         }
         
         struct email {
@@ -80,6 +82,13 @@ struct Constants {
         
         static let submittingLabel = "Submitting..."
         static let submittedLabel = "Thank You!"
+        
+        static let submittedMessage = "Your information has been received."
+        
+        static let errorTitle = "Whoops!"
+        static let errorMessage = "There was a problem submitting your information. Please try again."
+        static let errorAction = "Try Again"
+        
         
     }
 

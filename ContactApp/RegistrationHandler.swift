@@ -25,7 +25,9 @@ class RegistrationHandler {
     var FavoriteSoda: String = ""
     
     func registerUser(completion: (message: String, success: Bool) -> Void) {
+        print("registering...")
         if let requestBody = createRegistrationRequest() as? [String: AnyObject] {
+            print("request generated...")
             Alamofire.request(.POST, Constants.Services.registrationURL, parameters: requestBody, encoding: .JSON, headers: ["zumo-api-version" : "2.0.0", "Content-Type" : "application/json"])
                 .responseJSON(completionHandler: {response in
                     completion(message: response.result.description, success: response.result.isSuccess)
@@ -56,6 +58,20 @@ class RegistrationHandler {
             return params
         }
         else {
+            
+            let params = ["url" : self.url,
+                          "email" : self.emailAddress,
+                          "lastName" : self.lastName,
+                          "firstName" : self.firstName,
+                          "classStanding" : self.classStanding,
+                          "InterestediOS" : self.InterestediOS,
+                          "InterestedAndroid" : self.InterestedAndroid,
+                          "InterestedWindows" : self.InterestedWindows,
+                          "InterestedOther" : self.InterestedOther,
+                          "FavoritePizza" : self.FavoritePizza,
+                          "FavoriteSoda" : self.FavoriteSoda]
+            
+            print("failure:", params)
             return nil
         }
     }

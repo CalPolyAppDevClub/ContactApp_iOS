@@ -16,6 +16,7 @@ class SubmitAndResetViewController: ContactFormViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var timerProgress: UIProgressView!
@@ -28,17 +29,35 @@ class SubmitAndResetViewController: ContactFormViewController {
         
         //setup activity indicator
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.startAnimating()
         
         //setup progress bar
+        
+        //submit user info
+        submitInformation()
+        
+    }
+    
+    func submitInformation() {
+        activityIndicator.startAnimating()
         
         if let regHandler = getRegistrationHandler() {
             regHandler.registerUser({msg, success in
                 
                 if success {
-                    self.titleLabel.
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.titleLabel.text = Constants.SubmitReset.submittedLabel
+                        self.messageLabel.text = Constants.SubmitReset.submittedMessage
+                    }
                 }
-                
+                else {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        let notification = UIAlertController(title: Constants.SubmitReset.errorTitle, message: Constants.SubmitReset.errorMessage, preferredStyle: .ActionSheet)
+                        notification.addAction(UIAlertAction(title: Constants.SubmitReset.errorAction, style: .Default, handler: {action in
+                            self.submitInformation()
+                        }))
+                        self.presentViewController(notification, animated: true, completion: nil)
+                    }
+                }
             })
         }
     }

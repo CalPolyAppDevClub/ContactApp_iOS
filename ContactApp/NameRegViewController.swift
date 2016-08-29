@@ -54,16 +54,36 @@ class NameRegViewController: ContactFormViewController {
     @IBAction func nextButton(sender: UIButton) {
         
         let regHandler = getRegistrationHandler()
+        var emptyField: UITextField?
         
-        if let firstname = firstNameField.text {
-            regHandler?.firstName = firstname
-        }
-        
-        if let lastname = lastNameField.text {
+        //check and save last name
+        if let lastname = lastNameField.text where !lastname.isEmpty {
             regHandler?.lastName = lastname
         }
+        else {
+            emptyField = lastNameField
+        }
         
-        //TODO: Save Name data for later submission
-        self.performSegueWithIdentifier("showEmailInputScreen", sender: nil)
+        //check and save first name
+        if let firstname = firstNameField.text where !firstname.isEmpty {
+            regHandler?.firstName = firstname
+        }
+        else {
+            emptyField = firstNameField
+        }
+        
+        //if field is empty, prompt user. otherwise continue.
+        if let field = emptyField {
+            let msg = UIAlertController(title: Constants.ContactForm.name.requiredTitle, message: Constants.ContactForm.name.requriedMessage, preferredStyle: .Alert)
+            msg.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: {_ in
+                dispatch_async(dispatch_get_main_queue()) {
+                    field.becomeFirstResponder()
+                }
+            }))
+            presentViewController(msg, animated: true, completion: nil)
+        }
+        else {
+            self.performSegueWithIdentifier("showEmailInputScreen", sender: nil)
+        }
     }
 }
