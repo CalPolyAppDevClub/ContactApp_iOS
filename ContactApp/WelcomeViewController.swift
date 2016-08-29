@@ -27,11 +27,11 @@ class WelcomeViewController: UIViewController {
         messageLabel.text = Constants.Welcome.message
         
         //setup next button
-        nextButton.layer.cornerRadius = 10
+        nextButton.layer.cornerRadius = Constants.buttonRadius
+        nextButton.contentEdgeInsets = Constants.buttonInsets
         nextButton.setTitle(Constants.Welcome.nextButtonText, forState: .Normal)
     }
     @IBAction func nextButton(sender: UIButton) {
-        
         self.performSegueWithIdentifier("showNameInputScreen", sender: nil)
     }
 }

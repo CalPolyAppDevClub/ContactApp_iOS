@@ -10,7 +10,6 @@
 
 import Foundation
 import UIKit
-import Gloss
 
 class ServiceAgent: NSObject {
     

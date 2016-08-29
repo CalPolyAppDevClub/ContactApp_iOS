@@ -13,6 +13,9 @@ import UIKit
 
 struct Constants {
     
+    static let buttonInsets = UIEdgeInsets(top: 10, left: 25, bottom: 10, right: 25)
+    static let buttonRadius = CGFloat(15)
+    
     struct Welcome {
         static let title = "Glad you could join us."
         static let message = "define message in constants"
@@ -29,6 +32,8 @@ struct Constants {
         
         static let emailPrompt = "What's your email address?"
         static let emailFieldPlaceholder = "Email Address"
+        static let emailInvalidTitle = "Invalid Email"
+        static let emailInvalidMessage = "That email address isn't valid. Please try again!"
         
         static let classLvlPrompt = "What is your class standing?"
         static let classLevels = ["Freshman","Sophomore","Junior","Senior",
@@ -39,13 +44,28 @@ struct Constants {
                                        UIImage(named: "senior"),
                                        UIImage(named: "supersenior"),
                                        UIImage(named: "graduate")]
+        
+        struct platforms {
+            static let platformPrompt = "What platforms are you interested in?"
+            
+            static let optionOneLabel = "Android?"
+            static let optionOneYesImage = UIImage(named: "androidYES")
+            static let optionOneNoImage = UIImage(named: "androidNO")
+            
+            static let optionTwoLabel = "iOS?"
+            static let optionTwoYesImage = UIImage(named: "appleYES")
+            static let optionTwoNoImage = UIImage(named: "appleNO")
+            
+            static let optionThreeLabel = "Windows Phone?"
+            static let optionThreeYesImage = UIImage(named: "windowsYES")
+            static let optionThreeNoImage = UIImage(named: "windowsNO")
+            
+            static let optionFourTextLabel = "Anything else?"
+        }
+        
     }
 
-
-
-    struct Errors {
-        static let requestParsingError = NSError(domain: "CALPOLYAPPDEV", code: 42, userInfo: [NSLocalizedDescriptionKey :  NSLocalizedString("Parsing Error", value: "Unable to create request.", comment: "")])
-        static let responseParsingError = NSError(domain: "CALPOLYAPPDEV", code: 42, userInfo: [NSLocalizedDescriptionKey :  NSLocalizedString("Parsing Error", value: "Unable to interpret response.", comment: "")])
-        static let connectionError = NSError(domain: "MBSAPP", code: 23, userInfo: [NSLocalizedDescriptionKey :  NSLocalizedString("No Connection", value: "There seems to be a problem with your internet connection.", comment: "")])
+    struct Services {
+        static let registrationURL = "https://polyapp.azurewebsites.net/tables/UserItem"
     }
 }

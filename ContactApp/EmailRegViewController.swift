@@ -21,22 +21,40 @@ class EmailRegViewController: ContactFormViewController {
         super.viewDidLoad()
         
         //setup title
-        titleField.text = Constants.ContactForm.namePrompt
+        titleField.text = Constants.ContactForm.emailPrompt
         
         //setup email field
         emailInputField.placeholder = Constants.ContactForm.emailFieldPlaceholder
         emailInputField.delegate = self
         
         //setup next button
-        nextButton.layer.cornerRadius = 10
+        nextButton.layer.cornerRadius = Constants.buttonRadius
+        nextButton.contentEdgeInsets = Constants.buttonInsets
         nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
         
         //setup keyboard dismissal
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NameRegViewController.dismissKeyboard)))
     }
     
+    func emailAddressIsValid() -> Bool {
+        if let txt = emailInputField.text {
+            return txt.containsString(".") && txt.containsString("@")
+        }
+        return false
+    }
+    
     @IBAction func nextButton(sender: UIButton) {
-        self.performSegueWithIdentifier("showClassLvlInputScreen", sender: nil)
+        
+        if emailAddressIsValid() {
+            self.performSegueWithIdentifier("showClassLvlInputScreen", sender: nil)
+        }
+        else {
+            let msg = UIAlertController(title: Constants.ContactForm.emailInvalidTitle, message: Constants.ContactForm.emailInvalidMessage, preferredStyle: .Alert)
+            msg.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: {_ in
+                self.emailInputField.becomeFirstResponder()
+            }))
+            presentViewController(msg, animated: true, completion: nil)
+        }
     }
     
     //TODO: Validate email field before continuing

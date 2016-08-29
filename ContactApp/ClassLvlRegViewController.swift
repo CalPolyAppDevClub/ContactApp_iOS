@@ -35,6 +35,8 @@ class ClassLvlRegViewController: ContactFormViewController {
         updateClassLevel()
         
         //setup next button
+        nextButton.layer.cornerRadius = Constants.buttonRadius
+        nextButton.contentEdgeInsets = Constants.buttonInsets
         nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
         
     }
@@ -44,7 +46,7 @@ class ClassLvlRegViewController: ContactFormViewController {
     }
     
     @IBAction func nextButton(sender: UIButton) {
-        
+        performSegueWithIdentifier("showPlatformInputScreen", sender: nil)
     }
     
     func updateClassLevel() {

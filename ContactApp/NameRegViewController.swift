@@ -33,7 +33,8 @@ class NameRegViewController: ContactFormViewController {
         lastNameField.delegate = self
         
         //setup next button
-        nextButton.layer.cornerRadius = 10
+        nextButton.layer.cornerRadius = Constants.buttonRadius
+        nextButton.contentEdgeInsets = Constants.buttonInsets
         nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
         
         //setup keyboard dismissal
@@ -52,8 +53,17 @@ class NameRegViewController: ContactFormViewController {
     
     @IBAction func nextButton(sender: UIButton) {
         
-        //TODO: Save Name data for later submission
+        let regHandler = getRegistrationHandler()
         
+        if let firstname = firstNameField.text {
+            regHandler?.firstName = firstname
+        }
+        
+        if let lastname = lastNameField.text {
+            regHandler?.lastName = lastname
+        }
+        
+        //TODO: Save Name data for later submission
         self.performSegueWithIdentifier("showEmailInputScreen", sender: nil)
     }
 }
