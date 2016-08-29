@@ -20,6 +20,14 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let bgImage = UIImage(named: "CalPolyBG_Blurred")
+        let bgView = UIImageView(frame: view.frame)
+        bgView.image = bgImage
+        bgView.contentMode = .ScaleAspectFill
+        view.addSubview(bgView)
+        view.sendSubviewToBack(bgView)
+        view.setNeedsDisplay()
+        
         //setup title
         titleLabel.text = Constants.Welcome.title
         

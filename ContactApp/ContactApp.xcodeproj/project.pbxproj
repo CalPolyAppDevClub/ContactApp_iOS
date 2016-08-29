@@ -18,6 +18,8 @@
 		6BA1B7671D727001007ED56E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B7661D727001007ED56E /* Constants.swift */; };
 		6BA9F02A1D7280A900DB4EF3 /* NameRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9F0291D7280A900DB4EF3 /* NameRegViewController.swift */; };
 		6BA9F02F1D72853A00DB4EF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9F02E1D72853A00DB4EF3 /* Extensions.swift */; };
+		6BE695C11D74B17D00A3A5FB /* FoodRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE695C01D74B17D00A3A5FB /* FoodRegViewController.swift */; };
+		6BE695C31D74B77500A3A5FB /* SubmitAndResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */; };
 		6BFDBC201D73C7560003632F /* Pods_ContactApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BFDBC1F1D73C7560003632F /* Pods_ContactApp.framework */; };
 		6BFDBC231D73C7C80003632F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */; };
 		6BFDBC241D73C7C80003632F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC221D73C7C80003632F /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		6BA1B7661D727001007ED56E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6BA9F0291D7280A900DB4EF3 /* NameRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameRegViewController.swift; sourceTree = "<group>"; };
 		6BA9F02E1D72853A00DB4EF3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6BE695C01D74B17D00A3A5FB /* FoodRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodRegViewController.swift; sourceTree = "<group>"; };
+		6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAndResetViewController.swift; sourceTree = "<group>"; };
 		6BFDBC1F1D73C7560003632F /* Pods_ContactApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_ContactApp.framework; path = "../../../../Library/Developer/Xcode/DerivedData/ContactApp-gtjcyitcmrrcdhcjvseubjajwtxu/Build/Products/Debug-iphonesimulator/Pods_ContactApp.framework"; sourceTree = "<group>"; };
 		6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BFDBC221D73C7C80003632F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				6B177EC61D7296B10092ECFD /* EmailRegViewController.swift */,
 				6B177EC81D729F0A0092ECFD /* ClassLvlRegViewController.swift */,
 				6B534ADD1D73F4FF001EE502 /* PlatformRegViewController.swift */,
+				6BE695C01D74B17D00A3A5FB /* FoodRegViewController.swift */,
 			);
 			name = "Reg Form Pages";
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 				6B9396D81D73C4F2005D857B /* AppDelegate.swift */,
 				6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */,
 				6BFDBC221D73C7C80003632F /* Main.storyboard */,
+				6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */,
 				6B177EC41D728F860092ECFD /* WelcomeViewController.swift */,
 				6B177EBF1D728B160092ECFD /* Reg Form Pages */,
 				6BA1B7661D727001007ED56E /* Constants.swift */,
@@ -242,10 +248,12 @@
 				6B534ADE1D73F4FF001EE502 /* PlatformRegViewController.swift in Sources */,
 				6B177EC51D728F860092ECFD /* WelcomeViewController.swift in Sources */,
 				6B0148BC1D73C25500B10D38 /* RegistrationHandler.swift in Sources */,
+				6BE695C11D74B17D00A3A5FB /* FoodRegViewController.swift in Sources */,
 				6BA1B7671D727001007ED56E /* Constants.swift in Sources */,
 				6B177EC91D729F0A0092ECFD /* ClassLvlRegViewController.swift in Sources */,
 				6BA9F02A1D7280A900DB4EF3 /* NameRegViewController.swift in Sources */,
 				6B177EC71D7296B10092ECFD /* EmailRegViewController.swift in Sources */,
+				6BE695C31D74B77500A3A5FB /* SubmitAndResetViewController.swift in Sources */,
 				6BA9F02F1D72853A00DB4EF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

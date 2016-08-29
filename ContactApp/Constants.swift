@@ -18,32 +18,37 @@ struct Constants {
     
     struct Welcome {
         static let title = "Glad you could join us."
-        static let message = "define message in constants"
+        static let message = "We have a lot of cool stuff going on this year, and we're glad you'd like to get involved!"
         static let nextButtonText = "Register"
     }
     
     struct ContactForm {
         static let nextButtonText = "Next"
         
+        struct name {
+            static let namePrompt = "What's your name?"
+            static let firstNamePlaceholder = "First Name"
+            static let lastNamePlaceholder = "Last Name"
+        }
         
-        static let namePrompt = "What's your name?"
-        static let firstNameFieldPlaceholder = "First Name"
-        static let lastNameFieldPlaceholder = "Last Name"
+        struct email {
+            static let emailPrompt = "What's your email address?"
+            static let emailFieldPlaceholder = "What's your email address?"
+            static let emailInvalidTitle = "Invalid Email"
+            static let emailInvalidMessage = "That email address isn't valid. Please try again!"
+        }
         
-        static let emailPrompt = "What's your email address?"
-        static let emailFieldPlaceholder = "Email Address"
-        static let emailInvalidTitle = "Invalid Email"
-        static let emailInvalidMessage = "That email address isn't valid. Please try again!"
-        
-        static let classLvlPrompt = "What is your class standing?"
-        static let classLevels = ["Freshman","Sophomore","Junior","Senior",
-                            "Super Senior","Graduate Student"]
-        static let classLevelImages = [UIImage(named: "freshman"),
-                                       UIImage(named: "sophomore"),
-                                       UIImage(named: "junior"),
-                                       UIImage(named: "senior"),
-                                       UIImage(named: "supersenior"),
-                                       UIImage(named: "graduate")]
+        struct classLvl {
+            static let classLvlPrompt = "What is your class standing?"
+            static let classLevels = ["Freshman","Sophomore","Junior","Senior",
+                                      "Super Senior","Graduate Student"]
+            static let classLevelImages = [UIImage(named: "freshman"),
+                                           UIImage(named: "sophomore"),
+                                           UIImage(named: "junior"),
+                                           UIImage(named: "senior"),
+                                           UIImage(named: "supersenior"),
+                                           UIImage(named: "graduate")]
+        }
         
         struct platforms {
             static let platformPrompt = "What platforms are you interested in?"
@@ -62,6 +67,19 @@ struct Constants {
             
             static let optionFourTextLabel = "Anything else?"
         }
+        
+        
+        struct foodPrefs {
+            static let favoriteFoodPrompt = "Now the important stuff..."
+            static let favoritePizzaPlaceholder = "Favorite Pizza?"
+            static let favoriteDrinkPlaceholder = "Favorite Drink?"
+        }
+    }
+    
+    struct SubmitReset {
+        
+        static let submittingLabel = "Submitting..."
+        static let submittedLabel = "Thank You!"
         
     }
 

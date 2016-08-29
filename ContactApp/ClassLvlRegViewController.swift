@@ -19,14 +19,14 @@ class ClassLvlRegViewController: ContactFormViewController {
     @IBOutlet weak var classLevelSlider: UISlider!
     @IBOutlet weak var nextButton: UIButton!
     
-    let sliderValues = Constants.ContactForm.classLevels
-    let sliderImages = Constants.ContactForm.classLevelImages
+    let sliderValues = Constants.ContactForm.classLvl.classLevels
+    let sliderImages = Constants.ContactForm.classLvl.classLevelImages
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //setup title
-        titleLabel.text = Constants.ContactForm.classLvlPrompt
+        titleLabel.text = Constants.ContactForm.classLvl.classLvlPrompt
         
         //setup slider
         classLevelSlider.maximumValue = Float(sliderValues.count - 1)

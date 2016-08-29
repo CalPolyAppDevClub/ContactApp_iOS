@@ -21,10 +21,10 @@ class EmailRegViewController: ContactFormViewController {
         super.viewDidLoad()
         
         //setup title
-        titleField.text = Constants.ContactForm.emailPrompt
+        titleField.text = Constants.ContactForm.email.emailPrompt
         
         //setup email field
-        emailInputField.placeholder = Constants.ContactForm.emailFieldPlaceholder
+        emailInputField.placeholder = Constants.ContactForm.email.emailFieldPlaceholder
         emailInputField.delegate = self
         
         //setup next button
@@ -49,7 +49,7 @@ class EmailRegViewController: ContactFormViewController {
             self.performSegueWithIdentifier("showClassLvlInputScreen", sender: nil)
         }
         else {
-            let msg = UIAlertController(title: Constants.ContactForm.emailInvalidTitle, message: Constants.ContactForm.emailInvalidMessage, preferredStyle: .Alert)
+            let msg = UIAlertController(title: Constants.ContactForm.email.emailInvalidTitle, message: Constants.ContactForm.email.emailInvalidMessage, preferredStyle: .Alert)
             msg.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: {_ in
                 self.emailInputField.becomeFirstResponder()
             }))

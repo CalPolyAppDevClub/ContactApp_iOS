@@ -51,7 +51,6 @@ class PlatformRegViewController: ContactFormViewController {
     
     @IBAction func optionToggled(sender: UISwitch) {
         if let ident = sender.accessibilityIdentifier {
-            print(ident)
             switch ident {
                 case "android":
                     updateOptionOneImage()
@@ -82,5 +81,20 @@ class PlatformRegViewController: ContactFormViewController {
         optionThreeImage.setNeedsDisplay()
     }
     
+    
+    @IBAction func nextButton(sender: AnyObject) {
+        
+        if let regHandler = getRegistrationHandler() {
+            regHandler.InterestedAndroid = optionOneSwitch.on
+            regHandler.InterestediOS = optionTwoSwitch.on
+            regHandler.InterestedWindows =
+            optionThreeSwitch.on
+            
+            if let txt = optionTextField.text {
+                regHandler.InterestedOther = txt
+            }
+        }
+        
+    }
     
 }

@@ -22,14 +22,14 @@ class NameRegViewController: ContactFormViewController {
         super.viewDidLoad()
         
         //setup title
-        titleField.text = Constants.ContactForm.namePrompt
+        titleField.text = Constants.ContactForm.name.namePrompt
         
         //setup first name field
-        firstNameField.placeholder = Constants.ContactForm.firstNameFieldPlaceholder
+        firstNameField.placeholder = Constants.ContactForm.name.firstNamePlaceholder
         firstNameField.delegate = self
         
         //setup first name field
-        lastNameField.placeholder = Constants.ContactForm.lastNameFieldPlaceholder
+        lastNameField.placeholder = Constants.ContactForm.name.lastNamePlaceholder
         lastNameField.delegate = self
         
         //setup next button
