@@ -58,22 +58,22 @@ class RegistrationHandler {
             return params
         }
         else {
-            
-            let params = ["url" : self.url,
-                          "email" : self.emailAddress,
-                          "lastName" : self.lastName,
-                          "firstName" : self.firstName,
-                          "classStanding" : self.classStanding,
-                          "InterestediOS" : self.InterestediOS,
-                          "InterestedAndroid" : self.InterestedAndroid,
-                          "InterestedWindows" : self.InterestedWindows,
-                          "InterestedOther" : self.InterestedOther,
-                          "FavoritePizza" : self.FavoritePizza,
-                          "FavoriteSoda" : self.FavoriteSoda]
-            
-            print("failure:", params)
             return nil
         }
+    }
+    
+    func resetUserInfo() {
+        self.firstName = ""
+        self.lastName = ""
+        self.emailAddress = ""
+        self.url = ""
+        self.classStanding = ""
+        self.InterestediOS = false
+        self.InterestedAndroid = false
+        self.InterestedWindows = false
+        self.InterestedOther = ""
+        self.FavoritePizza = ""
+        self.FavoriteSoda = ""
     }
 }
 

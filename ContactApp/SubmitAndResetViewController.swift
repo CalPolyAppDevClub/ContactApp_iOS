@@ -15,11 +15,11 @@ import UIKit
 class SubmitAndResetViewController: ContactFormViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var timerProgress: UIProgressView!
+    
+    var progressValue: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,6 @@ class SubmitAndResetViewController: ContactFormViewController {
         
         //submit user info
         submitInformation()
-        
     }
     
     func submitInformation() {
@@ -45,9 +44,18 @@ class SubmitAndResetViewController: ContactFormViewController {
                 
                 if success {
                     dispatch_async(dispatch_get_main_queue()) {
+                        //update UI
                         self.titleLabel.text = Constants.SubmitReset.submittedLabel
                         self.messageLabel.text = Constants.SubmitReset.submittedMessage
+                        self.activityIndicator.stopAnimating()
                     }
+                    
+                    //reset registraton handler
+                    if let regHandler = getRegistrationHandler() {
+                        regHandler.resetUserInfo()
+                    }
+                    
+                    NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(SubmitAndResetViewController.transitionToStart), userInfo: nil, repeats: false)
                 }
                 else {
                     dispatch_async(dispatch_get_main_queue()) {
@@ -60,6 +68,10 @@ class SubmitAndResetViewController: ContactFormViewController {
                 }
             })
         }
+    }
+    
+    func transitionToStart() {
+        performSegueWithIdentifier("showWelcomeScreen", sender: self)
     }
 }
 

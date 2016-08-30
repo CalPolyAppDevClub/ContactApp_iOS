@@ -29,6 +29,11 @@ class FoodRegViewController: ContactFormViewController {
         
         //setup drink field
         favoriteSoda.placeholder = Constants.ContactForm.foodPrefs.favoriteDrinkPlaceholder
+        
+        //setup next button
+        nextButton.layer.cornerRadius = Constants.buttonRadius
+        nextButton.contentEdgeInsets = Constants.buttonInsets
+        nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
     }
    
     @IBAction func nextButton(sender: UIButton) {
