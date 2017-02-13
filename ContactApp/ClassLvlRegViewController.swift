@@ -37,21 +37,21 @@ class ClassLvlRegViewController: ContactFormViewController {
         //setup next button
         nextButton.layer.cornerRadius = Constants.buttonRadius
         nextButton.contentEdgeInsets = Constants.buttonInsets
-        nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
+        nextButton.setTitle(Constants.ContactForm.nextButtonText, for: UIControlState())
         
     }
     
-    @IBAction func sliderValueChanged(sender: UISlider) {
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
         updateClassLevel()
     }
     
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         
-        if let regHandler = getRegistrationHandler(), answer = classLevelLabel.text {
+        if let regHandler = getRegistrationHandler(), let answer = classLevelLabel.text {
             regHandler.classStanding = answer
         }
         
-        performSegueWithIdentifier("showPlatformInputScreen", sender: nil)
+        performSegue(withIdentifier: "showPlatformInputScreen", sender: nil)
     }
     
     func updateClassLevel() {

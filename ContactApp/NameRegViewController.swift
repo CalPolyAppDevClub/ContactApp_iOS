@@ -35,13 +35,13 @@ class NameRegViewController: ContactFormViewController {
         //setup next button
         nextButton.layer.cornerRadius = Constants.buttonRadius
         nextButton.contentEdgeInsets = Constants.buttonInsets
-        nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
+        nextButton.setTitle(Constants.ContactForm.nextButtonText, for: UIControlState())
         
         //setup keyboard dismissal
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NameRegViewController.dismissKeyboard)))
     }
     
-    override func textFieldShouldReturn(textField: UITextField) -> Bool {
+    override func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == firstNameField {
             lastNameField.becomeFirstResponder()
         }
@@ -51,13 +51,13 @@ class NameRegViewController: ContactFormViewController {
         return true
     }
     
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         
         let regHandler = getRegistrationHandler()
         var emptyField: UITextField?
         
         //check and save last name
-        if let lastname = lastNameField.text where !lastname.isEmpty {
+        if let lastname = lastNameField.text, !lastname.isEmpty {
             regHandler?.lastName = lastname
         }
         else {
@@ -65,7 +65,7 @@ class NameRegViewController: ContactFormViewController {
         }
         
         //check and save first name
-        if let firstname = firstNameField.text where !firstname.isEmpty {
+        if let firstname = firstNameField.text, !firstname.isEmpty {
             regHandler?.firstName = firstname
         }
         else {
@@ -74,16 +74,16 @@ class NameRegViewController: ContactFormViewController {
         
         //if field is empty, prompt user. otherwise continue.
         if let field = emptyField {
-            let msg = UIAlertController(title: Constants.ContactForm.name.requiredTitle, message: Constants.ContactForm.name.requriedMessage, preferredStyle: .Alert)
-            msg.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: {_ in
-                dispatch_async(dispatch_get_main_queue()) {
+            let msg = UIAlertController(title: Constants.ContactForm.name.requiredTitle, message: Constants.ContactForm.name.requriedMessage, preferredStyle: .alert)
+            msg.addAction(UIAlertAction(title: "Try Again", style: .default, handler: {_ in
+                DispatchQueue.main.async {
                     field.becomeFirstResponder()
                 }
             }))
-            presentViewController(msg, animated: true, completion: nil)
+            present(msg, animated: true, completion: nil)
         }
         else {
-            self.performSegueWithIdentifier("showEmailInputScreen", sender: nil)
+            self.performSegue(withIdentifier: "showEmailInputScreen", sender: nil)
         }
     }
 }

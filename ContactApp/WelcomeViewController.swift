@@ -23,9 +23,9 @@ class WelcomeViewController: UIViewController {
         let bgImage = UIImage(named: "CalPolyBG_Blurred")
         let bgView = UIImageView(frame: view.frame)
         bgView.image = bgImage
-        bgView.contentMode = .ScaleAspectFill
+        bgView.contentMode = .scaleAspectFill
         view.addSubview(bgView)
-        view.sendSubviewToBack(bgView)
+        view.sendSubview(toBack: bgView)
         view.setNeedsDisplay()
         
         //setup title
@@ -37,9 +37,9 @@ class WelcomeViewController: UIViewController {
         //setup next button
         nextButton.layer.cornerRadius = Constants.buttonRadius
         nextButton.contentEdgeInsets = Constants.buttonInsets
-        nextButton.setTitle(Constants.Welcome.nextButtonText, forState: .Normal)
+        nextButton.setTitle(Constants.Welcome.nextButtonText, for: UIControlState())
     }
-    @IBAction func nextButton(sender: UIButton) {
-        self.performSegueWithIdentifier("showNameInputScreen", sender: nil)
+    @IBAction func nextButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showNameInputScreen", sender: nil)
     }
 }

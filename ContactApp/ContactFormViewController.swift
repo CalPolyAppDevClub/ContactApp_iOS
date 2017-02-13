@@ -17,16 +17,16 @@ class ContactFormViewController: UIViewController, UITextFieldDelegate {
         let bgImage = UIImage(named: "CalPolyBG_Blurred")
         let bgView = UIImageView(frame: view.frame)
         bgView.image = bgImage
-        bgView.contentMode = .ScaleAspectFill
+        bgView.contentMode = .scaleAspectFill
         bgView.alpha = 0.4
         view.addSubview(bgView)
-        view.sendSubviewToBack(bgView)
+        view.sendSubview(toBack: bgView)
         view.setNeedsDisplay()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ContactFormViewController.dismissKeyboard)))
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dismissKeyboard()
         return true
     }

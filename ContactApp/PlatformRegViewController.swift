@@ -49,7 +49,7 @@ class PlatformRegViewController: ContactFormViewController {
         
     }
     
-    @IBAction func optionToggled(sender: UISwitch) {
+    @IBAction func optionToggled(_ sender: UISwitch) {
         if let ident = sender.accessibilityIdentifier {
             switch ident {
                 case "android":
@@ -67,34 +67,34 @@ class PlatformRegViewController: ContactFormViewController {
     }
     
     func updateOptionOneImage() {
-        optionOneImage.image = optionOneSwitch.on ? Constants.ContactForm.platforms.optionOneYesImage : Constants.ContactForm.platforms.optionOneNoImage
+        optionOneImage.image = optionOneSwitch.isOn ? Constants.ContactForm.platforms.optionOneYesImage : Constants.ContactForm.platforms.optionOneNoImage
         optionOneImage.setNeedsDisplay()
     }
     
     func updateOptionTwoImage() {
-        optionTwoImage.image = optionTwoSwitch.on ? Constants.ContactForm.platforms.optionTwoYesImage : Constants.ContactForm.platforms.optionTwoNoImage
+        optionTwoImage.image = optionTwoSwitch.isOn ? Constants.ContactForm.platforms.optionTwoYesImage : Constants.ContactForm.platforms.optionTwoNoImage
         optionTwoImage.setNeedsDisplay()
     }
     
     func updateOptionThreeImage() {
-        optionThreeImage.image = optionThreeSwitch.on ? Constants.ContactForm.platforms.optionThreeYesImage : Constants.ContactForm.platforms.optionThreeNoImage
+        optionThreeImage.image = optionThreeSwitch.isOn ? Constants.ContactForm.platforms.optionThreeYesImage : Constants.ContactForm.platforms.optionThreeNoImage
         optionThreeImage.setNeedsDisplay()
     }
     
     
-    @IBAction func nextButton(sender: AnyObject) {
+    @IBAction func nextButton(_ sender: AnyObject) {
         
         if let regHandler = getRegistrationHandler() {
-            regHandler.InterestedAndroid = optionOneSwitch.on
-            regHandler.InterestediOS = optionTwoSwitch.on
-            regHandler.InterestedWindows = optionThreeSwitch.on
+            regHandler.InterestedAndroid = optionOneSwitch.isOn
+            regHandler.InterestediOS = optionTwoSwitch.isOn
+            regHandler.InterestedWindows = optionThreeSwitch.isOn
             
             if let txt = optionTextField.text {
                 regHandler.InterestedOther = txt
             }
         }
         
-        performSegueWithIdentifier("showFoodInputScreen", sender: self)
+        performSegue(withIdentifier: "showFoodInputScreen", sender: self)
         
     }
     
