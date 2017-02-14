@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ContactApp/EmailRegViewController.swift"
-            timestampString = "494192347.496367"
+            timestampString = "508722535.716214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "nextButton(_:)"
-            landmarkType = "5">
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "nextButton(sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -43,7 +43,7 @@ class SubmitAndResetViewController: ContactFormViewController {
             regHandler.registerUser({msg, success in
                 
                 if success {
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         //update UI
                         self.titleLabel.text = Constants.SubmitReset.submittedLabel
                         self.messageLabel.text = Constants.SubmitReset.submittedMessage
@@ -55,15 +55,15 @@ class SubmitAndResetViewController: ContactFormViewController {
                         regHandler.resetUserInfo()
                     }
                     
-                    NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(SubmitAndResetViewController.transitionToStart), userInfo: nil, repeats: false)
+                    Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(SubmitAndResetViewController.transitionToStart), userInfo: nil, repeats: false)
                 }
                 else {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        let notification = UIAlertController(title: Constants.SubmitReset.errorTitle, message: Constants.SubmitReset.errorMessage, preferredStyle: .ActionSheet)
-                        notification.addAction(UIAlertAction(title: Constants.SubmitReset.errorAction, style: .Default, handler: {action in
+                    DispatchQueue.main.async {
+                        let notification = UIAlertController(title: Constants.SubmitReset.errorTitle, message: Constants.SubmitReset.errorMessage, preferredStyle: .actionSheet)
+                        notification.addAction(UIAlertAction(title: Constants.SubmitReset.errorAction, style: .default, handler: {action in
                             self.submitInformation()
                         }))
-                        self.presentViewController(notification, animated: true, completion: nil)
+                        self.present(notification, animated: true, completion: nil)
                     }
                 }
             })
@@ -71,7 +71,7 @@ class SubmitAndResetViewController: ContactFormViewController {
     }
     
     func transitionToStart() {
-        performSegueWithIdentifier("showWelcomeScreen", sender: self)
+        performSegue(withIdentifier: "showWelcomeScreen", sender: self)
     }
 }
 
