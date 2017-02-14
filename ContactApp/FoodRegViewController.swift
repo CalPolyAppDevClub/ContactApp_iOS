@@ -33,10 +33,10 @@ class FoodRegViewController: ContactFormViewController {
         //setup next button
         nextButton.layer.cornerRadius = Constants.buttonRadius
         nextButton.contentEdgeInsets = Constants.buttonInsets
-        nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
+        nextButton.setTitle(Constants.ContactForm.nextButtonText, for: UIControlState())
     }
    
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         if let regHandler = getRegistrationHandler() {
             
             //save pizza preference
@@ -50,6 +50,6 @@ class FoodRegViewController: ContactFormViewController {
             }
         }
         
-        performSegueWithIdentifier("showSubmitScreen", sender: self)
+        performSegue(withIdentifier: "showSubmitScreen", sender: self)
     }
 }

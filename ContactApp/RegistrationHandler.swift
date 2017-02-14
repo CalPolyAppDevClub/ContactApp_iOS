@@ -9,7 +9,6 @@
 
 import Foundation
 import Alamofire
-
 class RegistrationHandler {
     
     var firstName: String = ""
@@ -24,17 +23,17 @@ class RegistrationHandler {
     var FavoritePizza: String = ""
     var FavoriteSoda: String = ""
     
-    func registerUser(completion: (message: String, success: Bool) -> Void) {
+    func registerUser(_ completion: @escaping (_ message: String, _ success: Bool) -> Void) {
         print("registering...")
         if let requestBody = createRegistrationRequest() as? [String: AnyObject] {
             print("request generated...")
-            Alamofire.request(.POST, Constants.Services.registrationURL, parameters: requestBody, encoding: .JSON, headers: ["zumo-api-version" : "2.0.0", "Content-Type" : "application/json"])
+            Alamofire.request(Constants.Services.registrationURL, method: .post, parameters: requestBody, encoding: JSONEncoding.default, headers: ["zumo-api-version" : "2.0.0", "Content-Type" : "application/json"])
                 .responseJSON(completionHandler: {response in
-                    completion(message: response.result.description, success: response.result.isSuccess)
+                    completion(response.result.description, response.result.isSuccess)
                 })
         }
         else {
-            completion(message: "Unable to create the request.", success: false)
+            completion("Unable to create the request.", false)
         }
     }
     
@@ -54,8 +53,8 @@ class RegistrationHandler {
                          "InterestedWindows" : self.InterestedWindows,
                          "InterestedOther" : self.InterestedOther,
                          "FavoritePizza" : self.FavoritePizza,
-                         "FavoriteSoda" : self.FavoriteSoda]
-            return params
+                         "FavoriteSoda" : self.FavoriteSoda] as [String : Any]
+            return params as NSDictionary?
         }
         else {
             return nil
@@ -78,7 +77,7 @@ class RegistrationHandler {
 }
 
 func getRegistrationHandler() -> RegistrationHandler? {
-    if let delegate: AppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+    if let delegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
         return delegate.theRegistrationHelper
     }
     else {

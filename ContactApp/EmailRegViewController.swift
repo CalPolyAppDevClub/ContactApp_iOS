@@ -30,7 +30,7 @@ class EmailRegViewController: ContactFormViewController {
         //setup next button
         nextButton.layer.cornerRadius = Constants.buttonRadius
         nextButton.contentEdgeInsets = Constants.buttonInsets
-        nextButton.setTitle(Constants.ContactForm.nextButtonText, forState: .Normal)
+        nextButton.setTitle(Constants.ContactForm.nextButtonText, for: UIControlState())
         
         //setup keyboard dismissal
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NameRegViewController.dismissKeyboard)))
@@ -38,24 +38,24 @@ class EmailRegViewController: ContactFormViewController {
     
     func emailAddressIsValid() -> Bool {
         if let txt = emailInputField.text {
-            return txt.containsString(".") && txt.containsString("@")
+            return txt.contains(".") && txt.contains("@")
         }
         return false
     }
     
-    @IBAction func nextButton(sender: UIButton) {
+    @IBAction func nextButton(_ sender: UIButton) {
         
-        if let regHandler = getRegistrationHandler(), answer = emailInputField.text where emailAddressIsValid() {
+        if let regHandler = getRegistrationHandler(), let answer = emailInputField.text, emailAddressIsValid() {
             
             regHandler.emailAddress = answer
-            self.performSegueWithIdentifier("showClassLvlInputScreen", sender: nil)
+            self.performSegue(withIdentifier: "showClassLvlInputScreen", sender: nil)
         }
         else {
-            let msg = UIAlertController(title: Constants.ContactForm.email.emailInvalidTitle, message: Constants.ContactForm.email.emailInvalidMessage, preferredStyle: .Alert)
-            msg.addAction(UIAlertAction(title: "Try Again", style: .Default, handler: {_ in
+            let msg = UIAlertController(title: Constants.ContactForm.email.emailInvalidTitle, message: Constants.ContactForm.email.emailInvalidMessage, preferredStyle: .alert)
+            msg.addAction(UIAlertAction(title: "Try Again", style: .default, handler: {_ in
                 self.emailInputField.becomeFirstResponder()
             }))
-            presentViewController(msg, animated: true, completion: nil)
+            present(msg, animated: true, completion: nil)
         }
     }
     
