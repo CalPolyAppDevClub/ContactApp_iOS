@@ -22,6 +22,8 @@
 		6BE695C31D74B77500A3A5FB /* SubmitAndResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */; };
 		6BFDBC231D73C7C80003632F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */; };
 		6BFDBC241D73C7C80003632F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC221D73C7C80003632F /* Main.storyboard */; };
+		9AE9613BAB9BCFEE1166A235 /* Pods_ContactApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */; };
+		A63350AC1E538F80005C1589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63350AB1E538F80005C1589 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAndResetViewController.swift; sourceTree = "<group>"; };
 		6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BFDBC221D73C7C80003632F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A63350AB1E538F80005C1589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7FEE041E5279320038AF37 /* Alamofire.framework in Frameworks */,
+				9AE9613BAB9BCFEE1166A235 /* Pods_ContactApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 		6BA1B7401D723FB2007ED56E = {
 			isa = PBXGroup;
 			children = (
+				A63350AB1E538F80005C1589 /* Assets.xcassets */,
 				6B9396D81D73C4F2005D857B /* AppDelegate.swift */,
 				6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */,
 				6BFDBC221D73C7C80003632F /* Main.storyboard */,
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				6B7FEE031E5279320038AF37 /* Alamofire.framework */,
+				D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +157,7 @@
 				TargetAttributes = {
 					6BA1B7481D723FB2007ED56E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = WQPBM748VV;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -178,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BFDBC241D73C7C80003632F /* Main.storyboard in Resources */,
+				A63350AC1E538F80005C1589 /* Assets.xcassets in Resources */,
 				6BFDBC231D73C7C80003632F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +282,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -292,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -331,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -345,9 +355,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WQPBM748VV;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calpolyappdev.ContactApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,9 +373,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = WQPBM748VV;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calpolyappdev.ContactApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
