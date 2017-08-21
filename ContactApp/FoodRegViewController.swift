@@ -40,13 +40,13 @@ class FoodRegViewController: ContactFormViewController {
         if let regHandler = getRegistrationHandler() {
             
             //save pizza preference
-            if let txt = favoritePizza.text {
-                regHandler.FavoritePizza = txt
+            if let pizza = favoritePizza.text {
+                regHandler.addUserInfo(key: "FavoritePizza", value: pizza)
             }
             
             //save drink preference
-            if let txt = favoriteSoda.text {
-                regHandler.FavoriteSoda = txt
+            if let drink = favoriteSoda.text {
+                regHandler.addUserInfo(key: "FavoriteDrink", value: drink)
             }
         }
         

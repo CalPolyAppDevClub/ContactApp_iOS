@@ -48,7 +48,7 @@ class ClassLvlRegViewController: ContactFormViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         
         if let regHandler = getRegistrationHandler(), let answer = classLevelLabel.text {
-            regHandler.classStanding = answer
+            regHandler.addUserInfo(key: "ClassStanding", value: answer)
         }
         
         performSegue(withIdentifier: "showPlatformInputScreen", sender: nil)

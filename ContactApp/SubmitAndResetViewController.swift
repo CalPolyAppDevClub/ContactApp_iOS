@@ -40,7 +40,7 @@ class SubmitAndResetViewController: ContactFormViewController {
         activityIndicator.startAnimating()
         
         if let regHandler = getRegistrationHandler() {
-            regHandler.registerUser({msg, success in
+            regHandler.sendUserInfo({msg, success in
                 
                 if success {
                     DispatchQueue.main.async {

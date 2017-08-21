@@ -85,12 +85,12 @@ class PlatformRegViewController: ContactFormViewController {
     @IBAction func nextButton(_ sender: AnyObject) {
         
         if let regHandler = getRegistrationHandler() {
-            regHandler.InterestedAndroid = optionOneSwitch.isOn
-            regHandler.InterestediOS = optionTwoSwitch.isOn
-            regHandler.InterestedWindows = optionThreeSwitch.isOn
+            regHandler.addUserInfo(key: "InterestedAndroid", value: optionOneSwitch.isOn)
+            regHandler.addUserInfo(key: "InterestediOS", value: optionTwoSwitch.isOn)
+            regHandler.addUserInfo(key: "InterestedWindows", value: optionThreeSwitch.isOn)
             
-            if let txt = optionTextField.text {
-                regHandler.InterestedOther = txt
+            if let other = optionTextField.text {
+                regHandler.addUserInfo(key: "InterestedOther", value: other)
             }
         }
         

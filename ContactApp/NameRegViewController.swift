@@ -58,7 +58,7 @@ class NameRegViewController: ContactFormViewController {
         
         //check and save last name
         if let lastname = lastNameField.text, !lastname.isEmpty {
-            regHandler?.lastName = lastname
+            regHandler?.addUserInfo(key: "LastName", value: lastname)
         }
         else {
             emptyField = lastNameField
@@ -66,7 +66,7 @@ class NameRegViewController: ContactFormViewController {
         
         //check and save first name
         if let firstname = firstNameField.text, !firstname.isEmpty {
-            regHandler?.firstName = firstname
+            regHandler?.addUserInfo(key: "FirstName", value: firstname)
         }
         else {
             emptyField = firstNameField

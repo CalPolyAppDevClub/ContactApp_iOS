@@ -46,8 +46,7 @@ class EmailRegViewController: ContactFormViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         
         if let regHandler = getRegistrationHandler(), let answer = emailInputField.text, emailAddressIsValid() {
-            
-            regHandler.emailAddress = answer
+            regHandler.addUserInfo(key: "EmailAddress", value: answer)
             self.performSegue(withIdentifier: "showClassLvlInputScreen", sender: nil)
         }
         else {
