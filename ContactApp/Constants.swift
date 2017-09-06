@@ -91,8 +91,4 @@ struct Constants {
         
         
     }
-
-    struct Services {
-        static let registrationURL = "https://polyapp.azurewebsites.net/tables/UserItem"
-    }
 }

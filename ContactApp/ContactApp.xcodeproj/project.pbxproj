@@ -13,7 +13,9 @@
 		6B177EC71D7296B10092ECFD /* EmailRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B177EC61D7296B10092ECFD /* EmailRegViewController.swift */; };
 		6B177EC91D729F0A0092ECFD /* ClassLvlRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B177EC81D729F0A0092ECFD /* ClassLvlRegViewController.swift */; };
 		6B534ADE1D73F4FF001EE502 /* PlatformRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B534ADD1D73F4FF001EE502 /* PlatformRegViewController.swift */; };
-		6B7FEE041E5279320038AF37 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7FEE031E5279320038AF37 /* Alamofire.framework */; };
+		6B66A13E1F5F9AFC002279F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B66A13D1F5F9AFC002279F1 /* GoogleService-Info.plist */; };
+		6B8B99421F5FA169000FB8BD /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B99411F5FA169000FB8BD /* SetupViewController.swift */; };
+		6B8B99491F5FA883000FB8BD /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B99481F5FA883000FB8BD /* Secret.swift */; };
 		6B9396D91D73C4F2005D857B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9396D81D73C4F2005D857B /* AppDelegate.swift */; };
 		6BA1B7671D727001007ED56E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA1B7661D727001007ED56E /* Constants.swift */; };
 		6BA9F02A1D7280A900DB4EF3 /* NameRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9F0291D7280A900DB4EF3 /* NameRegViewController.swift */; };
@@ -22,11 +24,12 @@
 		6BE695C31D74B77500A3A5FB /* SubmitAndResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */; };
 		6BFDBC231D73C7C80003632F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */; };
 		6BFDBC241D73C7C80003632F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFDBC221D73C7C80003632F /* Main.storyboard */; };
-		9AE9613BAB9BCFEE1166A235 /* Pods_ContactApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */; };
 		A63350AC1E538F80005C1589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A63350AB1E538F80005C1589 /* Assets.xcassets */; };
+		D8EE32BA53AEDC055AB7BF08 /* Pods_ContactApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F949047B7C0AE61A8142A4 /* Pods_ContactApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F949047B7C0AE61A8142A4 /* Pods_ContactApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5658031E4497D8D6C997A5 /* Pods-ContactApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactApp.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ContactApp/Pods-ContactApp.debug.xcconfig"; sourceTree = "<group>"; };
 		672023D416D315DAC2A5929D /* Pods-ContactApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactApp.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ContactApp/Pods-ContactApp.release.xcconfig"; sourceTree = "<group>"; };
 		6B0148BB1D73C25500B10D38 /* RegistrationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationHandler.swift; sourceTree = "<group>"; };
@@ -35,7 +38,9 @@
 		6B177EC61D7296B10092ECFD /* EmailRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailRegViewController.swift; sourceTree = "<group>"; };
 		6B177EC81D729F0A0092ECFD /* ClassLvlRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassLvlRegViewController.swift; sourceTree = "<group>"; };
 		6B534ADD1D73F4FF001EE502 /* PlatformRegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformRegViewController.swift; sourceTree = "<group>"; };
-		6B7FEE031E5279320038AF37 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "/Users/jdurand/Developer/CPAD/ContactApp_iOS/Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<absolute>"; };
+		6B66A13D1F5F9AFC002279F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B8B99411F5FA169000FB8BD /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		6B8B99481F5FA883000FB8BD /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		6B9396D81D73C4F2005D857B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B9397061D73C564005D857B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BA1B7491D723FB2007ED56E /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +52,6 @@
 		6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BFDBC221D73C7C80003632F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A63350AB1E538F80005C1589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7FEE041E5279320038AF37 /* Alamofire.framework in Frameworks */,
-				9AE9613BAB9BCFEE1166A235 /* Pods_ContactApp.framework in Frameworks */,
+				D8EE32BA53AEDC055AB7BF08 /* Pods_ContactApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		6B177EBF1D728B160092ECFD /* Reg Form Pages */ = {
 			isa = PBXGroup;
 			children = (
+				6B177EC41D728F860092ECFD /* WelcomeViewController.swift */,
 				6B098F361D73A0F80079A1FD /* ContactFormViewController.swift */,
 				6BA9F0291D7280A900DB4EF3 /* NameRegViewController.swift */,
 				6B177EC61D7296B10092ECFD /* EmailRegViewController.swift */,
@@ -88,11 +92,13 @@
 		6BA1B7401D723FB2007ED56E = {
 			isa = PBXGroup;
 			children = (
+				6B8B99481F5FA883000FB8BD /* Secret.swift */,
 				A63350AB1E538F80005C1589 /* Assets.xcassets */,
+				6B66A13D1F5F9AFC002279F1 /* GoogleService-Info.plist */,
 				6B9396D81D73C4F2005D857B /* AppDelegate.swift */,
 				6BFDBC211D73C7C80003632F /* LaunchScreen.storyboard */,
 				6BFDBC221D73C7C80003632F /* Main.storyboard */,
-				6B177EC41D728F860092ECFD /* WelcomeViewController.swift */,
+				6B8B99411F5FA169000FB8BD /* SetupViewController.swift */,
 				6B177EBF1D728B160092ECFD /* Reg Form Pages */,
 				6BE695C21D74B77500A3A5FB /* SubmitAndResetViewController.swift */,
 				6BA1B7661D727001007ED56E /* Constants.swift */,
@@ -101,7 +107,7 @@
 				6B0148BB1D73C25500B10D38 /* RegistrationHandler.swift */,
 				6BA1B74A1D723FB2007ED56E /* Products */,
 				47C08B0F14F3ACC932087217 /* Pods */,
-				E708FC586C71ADD96B3286C9 /* Frameworks */,
+				F56DC7DEA9C97504E93235A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,11 +119,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E708FC586C71ADD96B3286C9 /* Frameworks */ = {
+		F56DC7DEA9C97504E93235A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B7FEE031E5279320038AF37 /* Alamofire.framework */,
-				D11F2612FD0DE258DC19167D /* Pods_ContactApp.framework */,
+				08F949047B7C0AE61A8142A4 /* Pods_ContactApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,7 +162,7 @@
 				TargetAttributes = {
 					6BA1B7481D723FB2007ED56E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WQPBM748VV;
+						DevelopmentTeam = QH4RJ755GR;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -186,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BFDBC241D73C7C80003632F /* Main.storyboard in Resources */,
+				6B66A13E1F5F9AFC002279F1 /* GoogleService-Info.plist in Resources */,
 				A63350AC1E538F80005C1589 /* Assets.xcassets in Resources */,
 				6BFDBC231D73C7C80003632F /* LaunchScreen.storyboard in Resources */,
 			);
@@ -248,6 +254,7 @@
 			files = (
 				6B9396D91D73C4F2005D857B /* AppDelegate.swift in Sources */,
 				6B098F371D73A0F80079A1FD /* ContactFormViewController.swift in Sources */,
+				6B8B99491F5FA883000FB8BD /* Secret.swift in Sources */,
 				6B534ADE1D73F4FF001EE502 /* PlatformRegViewController.swift in Sources */,
 				6B177EC51D728F860092ECFD /* WelcomeViewController.swift in Sources */,
 				6B0148BC1D73C25500B10D38 /* RegistrationHandler.swift in Sources */,
@@ -257,6 +264,7 @@
 				6BA9F02A1D7280A900DB4EF3 /* NameRegViewController.swift in Sources */,
 				6B177EC71D7296B10092ECFD /* EmailRegViewController.swift in Sources */,
 				6BE695C31D74B77500A3A5FB /* SubmitAndResetViewController.swift in Sources */,
+				6B8B99421F5FA169000FB8BD /* SetupViewController.swift in Sources */,
 				6BA9F02F1D72853A00DB4EF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +363,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WQPBM748VV;
+				DEVELOPMENT_TEAM = QH4RJ755GR;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -373,7 +381,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = WQPBM748VV;
+				DEVELOPMENT_TEAM = QH4RJ755GR;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

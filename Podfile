@@ -5,5 +5,7 @@ use_frameworks!
 project 'ContactApp/ContactApp.xcodeproj'
 
 target 'ContactApp' do
-    pod 'Alamofire'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'GoogleSignIn'
 end

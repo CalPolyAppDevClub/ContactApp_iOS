@@ -6,18 +6,31 @@
 //  Created by Joe Durand on 8/28/16.
 //  Copyright © 2016 Cal Poly App Dev. All rights reserved.
 //
-
+import UIKit
 import Foundation
-import Alamofire
+import FirebaseDatabase
+
 class RegistrationHandler {
+    
+    let firebaseURL = Secrets.FirebaseURL
     
     var userData : [String : Any] = [:]
 
     func sendUserInfo(_ completion: @escaping (_ message: String, _ success: Bool) -> Void) {
-        Alamofire.request(Constants.Services.registrationURL, method: .post, parameters: userData, encoding: JSONEncoding.default, headers: ["zumo-api-version" : "2.0.0", "Content-Type" : "application/json"])
-            .responseJSON(completionHandler: {response in
-                completion(response.result.description, response.result.isSuccess)
-            })
+        
+        let ref = Database.database().reference(fromURL: firebaseURL)
+        
+        if let key = userData["EmailAddress"] as? String
+        {
+            let sanitizedEmail = key.replacingOccurrences(of: ".", with: "<dot>")
+            ref.child(sanitizedEmail).setValue(userData)
+            completion("Successful", true)
+        }
+        else
+        {
+            completion("There was a problem. Please try again.", false)
+        }
+        
     }
     
     func resetUserInfo() {
